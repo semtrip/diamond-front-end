@@ -1,0 +1,40 @@
+@import url(../../../fonts/stylesheet.css);
+.hud-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    font-family: 'Montserrat';
+}
+
+.leftop {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.righttop {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.leftbottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.rightbottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.chat-block {
+    margin-top: 13px;
+    margin-left: 27px;
+    height: 600px;
+    width: 1000px;
+}
