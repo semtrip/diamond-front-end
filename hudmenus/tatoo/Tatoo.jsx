@@ -20,43 +20,43 @@ class Tatoo extends React.Component {
             selected: 0,
             items: [
                 { name: 'Прическа для топ типов ахуеть да', desc: 'Термостойкость: 20*', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
-                { name: 'Прическа', desc: '', price: 111, sale: 11 },
-                { name: 'Борода', desc: '', price: 1123, sale: 0 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 11 },
+                { name: 'Beard', desc: '', price: 1123, sale: 0 },
             ],
             itemsBack: [
-                { name: 'Прическа', desc: '', price: 111, sale: 0 },
-                { name: 'Борода123123', desc: '', price: 1123, sale: 0 },
+                { name: 'Hairstyle', desc: '', price: 111, sale: 0 },
+                { name: 'Beard123123', desc: '', price: 1123, sale: 0 },
             ]
         }
     }
@@ -280,16 +280,16 @@ class Tatoo extends React.Component {
                 {(this.state.type === 1 && this.state.selected !== -1) && (
                     <div className="tatoo__payment">
                         <span className="tatoo__payment__price">
-                            {`Цена: ${this.state.items[this.state.selected].price}`}
+                            {`Price: ${this.state.items[this.state.selected].price}`}
                         </span>
-                        <FlatButton text="Оплатить наличкой" onPress={() => {
+                        <FlatButton text="Pay by cash" onPress={() => {
                             try {
                                 mp.trigger('client:shopMenu:buyCash2', JSON.stringify(this.state.items[this.state.selected].params)); // eslint-disable-line
                             } catch (e) {
                                 console.log(e);
                             }
                         }} btncolor="#252525" customStyle={{ paddingLeft: '1rem', paddingRight: '1rem', border: `1px solid #fff` }} />
-                        <FlatButton text="Оплатить картой" onPress={() => {
+                        <FlatButton text="Pay by card" onPress={() => {
                             try {
                                 mp.trigger('client:shopMenu:buyCard2', JSON.stringify(this.state.items[this.state.selected].params)); // eslint-disable-line
                             } catch (e) {

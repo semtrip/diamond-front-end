@@ -51,64 +51,64 @@ class Inventory extends React.Component {
             upgradew_ids: [{ name: "P90", id: 28 }], // Сюда записываются данные оружия в экипировке которое можно зарядить выбранными патронами
 
             inter_menu: [ // Пункты меню (генерируются динамично, в зависимости от выбранного предмета)
-                { name: "Выбрать", action: "select", show: false, color: '#4CAF50' },
-                { name: "Разрядить", action: "unloadW", show: false },
+                { name: "Select", action: "select", show: false, color: '#4CAF50' },
+                { name: "Discharge", action: "unloadW", show: false },
 
-                { name: "Надеть", action: "put_on", show: false, color: '#4CAF50' },
-                { name: "Модифицировать", action: "put_on_gun", show: false, color: '#4CAF50' },
-                { name: "Использовать", action: "use", show: false, color: '#4CAF50' },
-                { name: "Использовать на игрока", action: "usePlayer", show: false, color: '#4CAF50' },
-                { name: "Употребить", action: "consume", show: false, color: '#4CAF50' },
-                { name: "Рыбачить", action: "fish", show: false, color: '#4CAF50' },
-                { name: "Играть", action: "play", show: false, color: '#4CAF50' },
-                { name: "Выкурить", action: "smoke", show: false, color: '#4CAF50' },
-                { name: "Съесть", action: "eat", show: false, color: '#4CAF50' },
-                { name: "Выпить", action: "drink", show: false, color: '#4CAF50' },
-                { name: "Экипировать", action: "equip", show: false, color: '#4CAF50' },
-                { name: "Зарядить", action: "loadw", show: false, color: '#4CAF50' },
-                { name: "Разделить", action: "split", show: false, color: '#4CAF50' },
-                { name: "Открыть", action: "weightGr", show: false, color: '#4CAF50' },
+                { name: "Put on", action: "put_on", show: false, color: '#4CAF50' },
+                { name: "Modify", action: "put_on_gun", show: false, color: '#4CAF50' },
+                { name: "Use", action: "use", show: false, color: '#4CAF50' },
+                { name: "Use on player", action: "usePlayer", show: false, color: '#4CAF50' },
+                { name: "Consume", action: "consume", show: false, color: '#4CAF50' },
+                { name: "To fish", action: "fish", show: false, color: '#4CAF50' },
+                { name: "Play", action: "play", show: false, color: '#4CAF50' },
+                { name: "Smoke", action: "smoke", show: false, color: '#4CAF50' },
+                { name: "Eat", action: "eat", show: false, color: '#4CAF50' },
+                { name: "Drink", action: "drink", show: false, color: '#4CAF50' },
+                { name: "Equip", action: "equip", show: false, color: '#4CAF50' },
+                { name: "Charge", action: "loadw", show: false, color: '#4CAF50' },
+                { name: "Divide", action: "split", show: false, color: '#4CAF50' },
+                { name: "Open", action: "weightGr", show: false, color: '#4CAF50' },
 
-                { name: "Информация о билете", action: "infoLoto", show: false },
+                { name: "Bile Information", action: "infoLoto", show: false },
 
-                { name: "Взять 1гр.", action: "take1gr", show: false },
-                { name: "Взять 10гр.", action: "take10gr", show: false },
-                { name: "Взять 50гр.", action: "take50gr", show: false },
+                { name: "Take 1gr.", action: "take1gr", show: false },
+                { name: "Take 10gr.", action: "take10gr", show: false },
+                { name: "Take 50gr.", action: "take50gr", show: false },
 
-                { name: "Взять 1шт.", action: "take1", show: false },
+                { name: "Take 1un.", action: "take1", show: false },
 
-                { name: "Посчитать", action: "countItems", show: false },
-                { name: "Посчитать", action: "countMoney", show: false },
-                { name: "Посчитать", action: "countPt", show: false },
+                { name: "Calculate", action: "countItems", show: false },
+                { name: "Calculate", action: "countMoney", show: false },
+                { name: "Calculate", action: "countPt", show: false },
 
-                { name: "Передать", action: "give", show: true },
+                { name: "Give", action: "give", show: true },
 
-                { name: "Открыть сумку", action: "openBag", show: false, color: '#2196F3' },
-                { name: "Переложить", action: "move", show: false, color: '#2196F3' },
-                { name: "Переложить все", action: "move_all", show: false, color: '#2196F3' },
-                { name: "Взять", action: "take", show: false, color: '#2196F3' },
-                { name: "Взять все", action: "take_all", show: false, color: '#2196F3' },
-                { name: "Переименовать", action: "rename", show: false, color: '#2196F3' },
+                { name: "Open bag", action: "openBag", show: false, color: '#2196F3' },
+                { name: "Shift", action: "move", show: false, color: '#2196F3' },
+                { name: "Shift all", action: "move_all", show: false, color: '#2196F3' },
+                { name: "Take", action: "take", show: false, color: '#2196F3' },
+                { name: "Take all", action: "take_all", show: false, color: '#2196F3' },
+                { name: "Rename", action: "rename", show: false, color: '#2196F3' },
 
-                { name: "Информация о предмете", action: "infoItem", show: false },
+                { name: "Information about the subject", action: "infoItem", show: false },
 
-                { name: "Снять", action: "take_off", show: false },
-                { name: "Убрать в инвентарь", action: "unequip", show: false },
+                { name: "Remove", action: "take_off", show: false },
+                { name: "Take off to inventory", action: "unequip", show: false },
 
-                { name: "Выбросить", action: "drop", show: false, color: '#FF9800' },
-                { name: "Закрыть", action: "close", show: false, color: '#f44336' },
+                { name: "Throw away", action: "drop", show: false, color: '#FF9800' },
+                { name: "Close", action: "close", show: false, color: '#f44336' },
             ],
 
             items: [ // Инвентарь
-                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
-                { id: 2, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
-                { id: 3, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
-                { id: 4, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
-                { id: 5, item_id: 279, name: "Патроны", volume: 15, desc: "", counti: 0, params: {} },
-                { id: 6, item_id: 1, name: "Что то там", volume: 15, desc: "", counti: 0, params: {} },
-                { id: 7, item_id: 3, name: "Еще что то", volume: 15, desc: "", counti: 0, params: {} },
-                { id: 10, item_id: 3, name: "Еще что то", volume: 15, desc: "", counti: 0, params: {} },
-                { id: 8, item_id: 2, name: "И тут еще что то", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 1, item_id: 14, name: "Burgers", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
+                { id: 2, item_id: 14, name: "Burgers", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
+                { id: 3, item_id: 14, name: "Burgers", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
+                { id: 4, item_id: 14, name: "Burgers", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
+                { id: 5, item_id: 279, name: "Bullets", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 6, item_id: 1, name: "What is in there", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 7, item_id: 3, name: "Anything else", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 10, item_id: 3, name: "Anything else", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 8, item_id: 2, name: "And there something else", volume: 15, desc: "", counti: 0, params: {} },
                 {
                     id: 27,
                     item_id: 95,
@@ -139,7 +139,7 @@ class Inventory extends React.Component {
                 {
                     id: 30,
                     item_id: 116,
-                    name: "Чёткая снайпа",
+                    name: "Awesome sniper rifle",
                     volume: 15,
                     desc: "SM-0001244",
                     counti: 0,
@@ -148,41 +148,41 @@ class Inventory extends React.Component {
                 {
                     id: 31,
                     item_id: 117,
-                    name: "Выбор твоей бабушки",
+                    name: "Your grandmother's choice",
                     volume: 15,
                     desc: "AR-0001244",
                     counti: 0,
                     params: {}
                 },
-                { id: 32, item_id: 118, name: "Какая то хрень", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 33, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
-                { id: 34, item_id: 120, name: "Пистолет-обрез?", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 35, item_id: 121, name: "Ракетница", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
-                { id: 36, item_id: 122, name: "Гранатомёт", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 37, item_id: 264, name: "Сумка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 38, item_id: 264, name: "Сумка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 39, item_id: 265, name: "Футболка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 40, item_id: 269, name: "Кепка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
+                { id: 32, item_id: 118, name: "Some kind of crap", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 33, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
+                { id: 34, item_id: 120, name: "Pistol sawn-off?", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 35, item_id: 121, name: "Rocket launcher", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
+                { id: 36, item_id: 122, name: "Grenade launcher", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 37, item_id: 264, name: "Bag", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 38, item_id: 264, name: "Bag", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 39, item_id: 265, name: "T-shirt", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 40, item_id: 269, name: "Cap", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 41, item_id: 48, name: "Money", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 41, item_id: 275, name: "Gloves", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
 
             ],
             itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
 
             secondary_items: [ // Багажник
-                { id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} },
-                { id: 32, item_id: 118, name: "Какая то хрень", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 33, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
-                { id: 34, item_id: 120, name: "Пистолет-обрез?", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 35, item_id: 121, name: "Ракетница", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
-                { id: 36, item_id: 122, name: "Гранатомёт", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 37, item_id: 264, name: "Сумка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 38, item_id: 264, name: "Сумка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 39, item_id: 265, name: "Футболка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 40, item_id: 269, name: "Кепка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
+                { id: 15, item_id: 14, name: "Burger", volume: 15, desc: "", counti: 0, params: {} },
+                { id: 32, item_id: 118, name: "Some kind of crap", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 33, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
+                { id: 34, item_id: 120, name: "Pistol sawn-off?", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 35, item_id: 121, name: "Rocket launcher", volume: 15, desc: "AR-0001244", counti: 0, params: {} },
+                { id: 36, item_id: 122, name: "Grenade launcher", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 37, item_id: 264, name: "Bag", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 38, item_id: 264, name: "Bag", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 39, item_id: 265, name: "T-shirt", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 40, item_id: 269, name: "Cap", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 41, item_id: 48, name: "Money", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 41, item_id: 275, name: "Gloves", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
                 // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
             ],
             secondary_itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
@@ -264,18 +264,18 @@ class Inventory extends React.Component {
             ],
 
             equipment_weapon: [ // Экипированное оружие
-                { id: 33, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
-                { id: 34, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 33, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
+                { id: 34, item_id: 119, name: "Similar to AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } },
             ],
             selected_weapon_id: 33,
-            selected_weapon_name: 'Похоже на AWP',
+            selected_weapon_name: 'Similar to AWP',
             selected_weapon_item_id: 0,
             updateItemIcons_primary_timeout: false,
             updateItemIcons_secondary_timeout: false,
@@ -285,15 +285,15 @@ class Inventory extends React.Component {
             selected_recipe: {},
             learned_recipes: [
                 {
-                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.~br~Ресурсы для создания: бинт 2шт, маленькая аптечка`,
+                    id: 80, name: "Large first aid kit", desc: `This first aid kit restores up to 100% health.~br~Resources for creating: bandage 2un, little aid kit`,
                     craft: ['199', '3', '3'], craft_time: 200000,
                 },
                 {
-                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.~br~Ресурсы для создания: бинт 2шт, маленькая аптечка`,
+                    id: 80, name: "Large first aid kit", desc: `This first aid kit restores up to 100% health.~br~Resources for creating: bandage 2un, little aid kit`,
                     craft: ['199', '3', '3'], craft_time: 200000,
                 },
                 {
-                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.~br~Ресурсы для создания: бинт 2шт, маленькая аптечка`,
+                    id: 80, name: "Large first aid kit", desc: `This first aid kit restores up to 100% health.~br~Resources for creating: bandage 2un, little first aid kit`,
                     craft: ['199', '3', '3'], craft_time: 200000,
                 },
             ],
@@ -1044,7 +1044,7 @@ class Inventory extends React.Component {
     }
 
     countPtItemMenu(item) { // Тут нужно получать ID ближайших игроков для передачи предмета
-        this.notifyToClient('В коробке ~g~' + parseInt(item.counti) + 'пт.');
+        this.notifyToClient('In the box ~g~' + parseInt(item.counti) + 'un.');
     }
 
     unloadWItemMenu(item) { // Тут нужно получать ID ближайших игроков для передачи предмета
@@ -1210,7 +1210,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(items_copy[i], 'inventory') !== null) {
                     let item = this.checkItem(items_copy[i], 'inventory', true)
                     if (this.state.secondary_weight_now + item.volume > this.state.secondary_weight_max) {
-                        this.notifyToClient('~r~Хранилище переполнено ;c');
+                        this.notifyToClient('~r~The storage is overflowing ;c');
                         return;
                     }
                     setTimeout(() => {
@@ -1229,7 +1229,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
                     if (this.state.secondary_weight_now + item.volume > this.state.secondary_weight_max) {
-                        this.notifyToClient('~r~Хранилище переполнено ;c');
+                        this.notifyToClient('~r~The storage is overflowing ;c');
                         return;
                     }
                     this.setState({ items: this.arrayRemove(this.state.items, item) })
@@ -1243,7 +1243,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'outfit') !== null) {
                     item = this.checkItem(item, 'outfit')
                     if (this.state.secondary_weight_now + item.volume > this.state.secondary_weight_max) {
-                        this.notifyToClient('~r~Хранилище переполнено ;c');
+                        this.notifyToClient('~r~The storage is overflowing ;c');
                         return;
                     }
                     this.setState({ equipment_outfit: this.arrayRemove(this.state.equipment_outfit, item) })
@@ -1257,7 +1257,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'weapon') !== null) {
                     item = this.checkItem(item, 'weapon')
                     if (this.state.secondary_weight_now + item.volume > this.state.secondary_weight_max) {
-                        this.notifyToClient('~r~Хранилище переполнено ;c');
+                        this.notifyToClient('~r~The storage is overflowing ;c');
                         return;
                     }
                     this.setState({ equipment_weapon: this.arrayRemove(this.state.equipment_weapon, item) }, () => {
@@ -1294,7 +1294,7 @@ class Inventory extends React.Component {
             if (this.checkItem(items_copy[i], 'secondary_inv') !== null) {
                 let item = this.checkItem(items_copy[i], 'secondary_inv', true)
                 if (this.state.weight_now + item.volume > this.state.weight_max) {
-                    this.notifyToClient('~r~Ваш инвентарь переполнен ;c');
+                    this.notifyToClient('~r~Your inventory is full ;c');
                     return;
                 }
                 setTimeout(() => {
@@ -1313,9 +1313,9 @@ class Inventory extends React.Component {
                     item = this.checkItem(item, 'secondary_inv')
                     if (this.state.weight_now + item.volume > this.state.weight_max) {
                         if (item.item_id === 264)
-                            this.notifyToClient('~r~Сумка в инвентарь не складывается, её можно только выкинуть, положить на склад, в багажник и так далее');
+                            this.notifyToClient('~r~The bag does not add up to inventory, you can only throw it away, put it in a warehouse, in the trunk, and etc');
                         else
-                            this.notifyToClient('~r~Ваш инвентарь переполнен ;c');
+                            this.notifyToClient('~r~Your inventory is full ;c');
                         return;
                     }
                     this.setState({ secondary_items: this.arrayRemove(this.state.secondary_items, item) })
@@ -1439,13 +1439,13 @@ class Inventory extends React.Component {
             case 'inventory':
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
-                    this.notifyToClient('~b~В пачке ' + item.counti + 'шт.');
+                    this.notifyToClient('~b~In pack ' + item.counti + 'un.');
                 }
                 break;
             case 'secondary_inv':
                 if (this.checkItem(item, 'secondary_inv') !== null) {
                     item = this.checkItem(item, 'secondary_inv')
-                    this.notifyToClient('~b~В пачке ' + item.counti + 'шт.');
+                    this.notifyToClient('~b~In pack ' + item.counti + 'un.');
                 }
                 break;
             default:
@@ -1478,7 +1478,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
                     if (item.counti < 1) {
-                        this.notifyToClient('~r~Пачка уже пустая.');
+                        this.notifyToClient('~r~The pack is already empty.');
                         return;
                     }
                     mp.trigger('client:inventory:take1gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1488,7 +1488,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'secondary_inv') !== null) {
                     item = this.checkItem(item, 'secondary_inv')
                     if (item.counti < 1) {
-                        this.notifyToClient('~r~Пачка уже пустая.');
+                        this.notifyToClient('~r~The pack is already empty.');
                         return;
                     }
                     mp.trigger('client:inventory:take1gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1505,7 +1505,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
                     if (item.counti < 10) {
-                        this.notifyToClient('~r~Пачка пустая или в ней нет 10-ти грамм.');
+                        this.notifyToClient('~r~The pack is empty or does not contain 10 grams.');
                         return;
                     }
                     mp.trigger('client:inventory:take10gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1515,7 +1515,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'secondary_inv') !== null) {
                     item = this.checkItem(item, 'secondary_inv')
                     if (item.counti < 10) {
-                        this.notifyToClient('~r~Пачка пустая или в ней нет 10-ти грамм.');
+                        this.notifyToClient('~r~The pack is empty or does not contain 10 grams.');
                         return;
                     }
                     mp.trigger('client:inventory:take10gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1532,7 +1532,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
                     if (item.counti < 50) {
-                        this.notifyToClient('~r~Пачка пустая или в ней нет 50-ти грамм.');
+                        this.notifyToClient('~r~The pack is empty or does not contain 50 grams.');
                         return;
                     }
                     mp.trigger('client:inventory:take50gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1542,7 +1542,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'secondary_inv') !== null) {
                     item = this.checkItem(item, 'secondary_inv')
                     if (item.counti < 50) {
-                        this.notifyToClient('~r~Пачка пустая или в ней нет 50-ти грамм.');
+                        this.notifyToClient('~r~The pack is empty or does not contain 50 grams.');
                         return;
                     }
                     mp.trigger('client:inventory:take50gr', item.id, item.item_id, item.counti); // eslint-disable-line
@@ -1610,26 +1610,26 @@ class Inventory extends React.Component {
             case 'inventory':
                 if (this.checkItem(item, 'inventory') !== null) {
                     item = this.checkItem(item, 'inventory')
-                    this.notifyToClient(`~b~Имя: ~s~${item.name}\n~b~Объем: ~s~${item.volume}см³`)
+                    this.notifyToClient(`~b~Name: ~s~${item.name}\n~b~Volume: ~s~${item.volume}см³`)
                 }
                 break;
             case 'weapon':
                 if (this.checkItem(item, 'weapon') !== null) {
                     item = this.checkItem(item, 'weapon')
-                    this.notifyToClient(`~b~Имя: ~s~${item.name}\n~b~Объем: ~s~${item.volume}см³`)
+                    this.notifyToClient(`~b~Name: ~s~${item.name}\n~b~Volume: ~s~${item.volume}см³`)
                 }
                 break;
             case 'outfit':
                 item = this.getOutfitByType(item.type)[0]
                 if (this.checkItem(item, 'outfit') !== null) {
                     item = this.checkItem(item, 'outfit')
-                    this.notifyToClient(`~b~Имя: ~s~${item.name}\n~b~Объем: ~s~${item.volume}см³`)
+                    this.notifyToClient(`~b~Name: ~s~${item.name}\n~b~Volume: ~s~${item.volume}см³`)
                 }
                 break;
             case 'secondary_inv':
                 if (this.checkItem(item, 'secondary_inv') !== null) {
                     item = this.checkItem(item, 'secondary_inv')
-                    this.notifyToClient(`~b~Имя: ~s~${item.name}\n~b~Объем: ~s~${item.volume}см³`)
+                    this.notifyToClient(`~b~Name: ~s~${item.name}\n~b~Volume: ~s~${item.volume}см³`)
                 }
                 break;
             default:
@@ -1689,7 +1689,7 @@ class Inventory extends React.Component {
                 }
                 break;
             case 'outfit':
-                this.notifyToClient('~r~Для начала уберите с экипировки');
+                this.notifyToClient('~r~To first, remove from equipment');
                 /*item = this.getOutfitByType(item.type)[0]
                 if (this.checkItem(item, 'outfit') !== null) {
                     item = this.checkItem(item, 'outfit')
@@ -1698,7 +1698,7 @@ class Inventory extends React.Component {
                 }*/
                 break;
             case 'weapon':
-                this.notifyToClient('~r~Для начала уберите с экипировки');
+                this.notifyToClient('~r~To first, remove from equipment');
                 /*if (this.checkItem(item, 'weapon') !== null) {
                     item = this.checkItem(item, 'weapon')
                     this.setState({equipment_weapon: this.arrayRemove(this.state.equipment_weapon, item)}, () => {
@@ -1811,9 +1811,9 @@ class Inventory extends React.Component {
                     if (this.state.weight_now + item.volume > this.state.weight_max) {
 
                         if (item.item_id === 264)
-                            this.notifyToClient('~r~Сумка в инвентарь не складывается, её можно только выкинуть, положить на склад, в багажник и так далее');
+                            this.notifyToClient('~r~The bag does not add up to inventory, you can only throw it away, put it in a warehouse, in the trunk, and etc');
                         else
-                            this.notifyToClient('~r~Ваш инвентарь переполнен ;c');
+                            this.notifyToClient('~r~Your inventory is full ;c');
                         return;
                     }
                     this.setState({ equipment_outfit: this.arrayRemove(this.state.equipment_outfit, item) })
@@ -1830,7 +1830,7 @@ class Inventory extends React.Component {
     itemPutOn(item, source) {
         for (let i = 0; i < this.state.outfit[0].length; i++) {
             if (this.state.outfit[0][i].type === this.getOutfitType(item) && this.state.outfit[0][i].equipped === true) {
-                this.notifyToClient('~r~Предмет уже экипирован, для начала снимите его');
+                this.notifyToClient('~r~The subject is already equipped, first remove it');
                 return;
             }
         }
@@ -1884,7 +1884,7 @@ class Inventory extends React.Component {
                 if (this.checkItem(item, 'weapon') !== null) {
                     item = this.checkItem(item, 'weapon')
                     if (this.state.weight_now + item.volume > this.state.weight_max) {
-                        this.notifyToClient('~r~Ваш инвентарь переполнен ;c');
+                        this.notifyToClient('~r~Your inventory is full ;c');
                         return;
                     }
                     this.setState({ equipment_weapon: this.arrayRemove(this.state.equipment_weapon, item) }, () => {
@@ -2075,7 +2075,7 @@ class Inventory extends React.Component {
     }
     craftItem() {
         if (this.state.craft_process > -1) {
-            this.notifyToClient('~r~Крафт в процессе!');
+            this.notifyToClient('~r~Kraft in the process!');
             return;
         }
         this.setState({ craft_process: 100 })
@@ -2083,7 +2083,7 @@ class Inventory extends React.Component {
             this.setState({ craft_process: 0 })
 
             if (!this.isItemsInInventory(this.state.selected_recipe.craft)) {
-                this.notifyToClient('~r~Недостаточно ингредиентов ;c');
+                this.notifyToClient('~r~Not enough ingredients ;c');
                 return;
             }
 
@@ -2159,7 +2159,7 @@ class Inventory extends React.Component {
                                 <div className="player-craft">
                                     <div className="title-inv">
                                         <span className="title-inv__name">
-                                            {this.state.craft ? 'Крафт' : 'Оружие'}
+                                            {this.state.craft ? 'Kraft' : 'Weapon'}
                                         </span>
                                         <div className="close-window-craft" onClick={() => this.closeInventory()}>
                                             <img src={`https://gta-5.ru/server/client/images/icons/components/inventory/img/close.svg`} className="close-window-craft__img" />
@@ -2381,7 +2381,7 @@ class Inventory extends React.Component {
                                         <span className="weight-title-inv">
                                             {this.numberToK(this.state.weight_now)} / {this.numberToK(this.state.weight_max)}
                                         </span>
-                                        <span className="title-inv__name">Инвентарь</span>
+                                        <span className="title-inv__name">Inventory</span>
                                     </div>
 
                                     <Droppable className="object-inv-box droppable" id="take_off" that={this}>

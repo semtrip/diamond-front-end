@@ -33,14 +33,14 @@ const PropertyCar = (props) => {
                                 </div>
                         </div>
                         <span className="govmenu__propertygov__info__balance">
-                            {`Текущая задолженость: `}
+                            {`Current debt: `}
                             <span className="govmenu__propertygov__info__balance__info">
                                 {`$ ${balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`}
-                                <span className="govmenu__propertygov__info__balance"> из </span>
+                                <span className="govmenu__propertygov__info__balance"> from </span>
                                 <span className="govmenu__propertygov__info__balance__info__max">
                                     {` $ ${maxbalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}
                                     <span className="govmenu__propertygov__info__balance">
-                                        {`  [$ ${tax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} в день ]`}
+                                        {`  [$ ${tax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} in a day ]`}
                                     </span>
                                 </span>
                             </span>
@@ -54,7 +54,7 @@ const PropertyCar = (props) => {
                         <div className="govmenu__propertygov__payment">
                             <div className="accountmenu__content__reports__dialog__input" style={{width: '20%', height: 'auto', marginTop: 0, marginBottom: 0, paddingTop: '0.9rem', paddingBottom: '0.9rem'}}>
                                 <label style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                                    <input style={{width: '70%'}} type="text" name="name" placeholder="Введите сумму..." className="accountmenu__report__input" value={taxValue} onChange={(event) => setTaxValue(event.target.value)} />
+                                    <input style={{width: '70%'}} type="text" name="name" placeholder="Enter the amount..." className="accountmenu__report__input" value={taxValue} onChange={(event) => setTaxValue(event.target.value)} />
                                     <div style={{display: 'flex'}}>
                                         <span className="govmenu__propertygov__info__balance" style={{fontSize: '0.8rem', marginRight: '10%'}}>
                                             {`MAX`}
@@ -64,24 +64,24 @@ const PropertyCar = (props) => {
                                 </label>
                             </div>
                             <span className="govmenu__propertygov__info__balance" style={{marginLeft: '3%', marginRight: '3%'}}>
-                                {`Оплатить`}
+                                {`Pay`}
                             </span>
                             <div className="govmenu__propertygov__payment__btns" style={{minWidth: '60%'}}>
                                 <div style={{width: '100%'}}>
                                     <BigButton
-                                        text="Наличными"
+                                        text="Cash"
                                         children={<MdCash fontSize="20px" color="white" />}
                                         type={0}
-                                        onPress={() => console.log('Успешно оплатил налог наличными на сумму ' + taxValue)}
+                                        onPress={() => console.log('Successfully paid for the tax cash per sum ' + taxValue)}
                                     />
                                 </div>
                                 <div style={{width: '100%', marginLeft: '4%'}}>
                                     <BigButton
                                         nowrap={true}
-                                        text="Банковской картой"
+                                        text="By banking card"
                                         children={<MdCard fontSize="20px" color="white" />}
                                         type={0}
-                                        onPress={() => console.log('Успешно оплатил налог банковской картой на сумму ' + taxValue)}
+                                        onPress={() => console.log('Successfully paid tax by bank card for the amount ' + taxValue)}
                                     />
                                 </div>
                             </div>
@@ -90,35 +90,35 @@ const PropertyCar = (props) => {
                             <div className="govmenu__propertygov__propertycar__card" style={{border: 0}}>
                                 <div className="accountmenu__content__cards__car__props">
                                     <div className="accountmenu__content__cards__car__props__item">
-                                        <span className="accountmenu__content__cards__car__props__tdata">Номер</span>
+                                        <span className="accountmenu__content__cards__car__props__tdata">Number</span>
                                         <span className="accountmenu__content__cards__car__props__bdata">{vin}</span>
                                     </div>
                                     <div className="accountmenu__content__cards__car__props__item">
-                                        <span className="accountmenu__content__cards__car__props__tdata">Класс</span>
+                                        <span className="accountmenu__content__cards__car__props__tdata">Class</span>
                                         <span className="accountmenu__content__cards__car__props__bdata">{type}</span>
                                     </div>
                                     <div className="accountmenu__content__cards__car__props__item">
-                                        <span className="accountmenu__content__cards__car__props__tdata">Топливо</span>
+                                        <span className="accountmenu__content__cards__car__props__tdata">Fuel</span>
                                         <span className="accountmenu__content__cards__car__props__bdata">{fuel}</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="accountmenu__cards__btnreports" style={{paddingTop: 0, paddingBottom: 0}}>
                                 <div style={{width: '45%'}}>
-                                    <BigButton text="Продать автосалону" type={2} onPress={() => setAlert(true, {
+                                    <BigButton text="Sell to car dealership" type={2} onPress={() => setAlert(true, {
                                         type: 1,
-                                        title: 'Продажа автосалону',
-                                        text: `Вы действительно хотите продать транспорт ${name} (${vin}) автосалону за $ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}?`,
-                                        value: [{text: 'Отказаться', type: 0}, {text: 'Продать', type: 1}]
+                                        title: 'Sale to a car dealership',
+                                        text: `You really want to sell transport ${name} (${vin}) car dealership for $ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}?`,
+                                        value: [{text: 'Refuse', type: 0}, {text: 'Sell', type: 1}]
                                     })}
                                     />
                                 </div>
                                 <div style={{width: '45%'}}>
-                                    <BigButton text="Продать игроку" type={0} onPress={() => setAlert(true, {
+                                    <BigButton text="Sell to player" type={0} onPress={() => setAlert(true, {
                                         type: 0, 
-                                        title: 'Продажа игроку', 
-                                        text: `Вы действительно хотите продать транспорт ${name} (${vin})?`,
-                                        value: [{text: 'Отказаться', type: 0}, {text: 'Продать', type: 1}]
+                                        title: 'Sale to player', 
+                                        text: `You really want to sell the transport ${name} (${vin})?`,
+                                        value: [{text: 'Refuse', type: 0}, {text: 'Sell', type: 1}]
                                     })} 
                                     />
                                 </div>

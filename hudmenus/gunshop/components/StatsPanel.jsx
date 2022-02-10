@@ -20,7 +20,7 @@ const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor, img }) => {
                     </div>
                     <div className={(catalog[selected].items[selectedCatalog].price !== '' ? 'hmenu__gunshop__stats__price__text' : 'hmenu__gunshop__hide')}>
                         <span className="hmenu__gunshop__stats__price__gtext">
-                            Цена
+                            Price
                         </span>
                         <span className="hmenu__gunshop__stats__price__gprice">
                             {`${catalog[selected].items[selectedCatalog].price}`}
@@ -32,21 +32,21 @@ const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor, img }) => {
                         } catch (e) {
                             console.log(e);
                         }
-                    }} btncolor={btncolor} text="Оплатить по карте" />
+                    }} btncolor={btncolor} text="Pay by card" />
                     <FlatButton isHide={catalog[selected].items[selectedCatalog].price === ''} onPress={() => {
                         try {
                             mp.trigger('client:shopMenu:buyCash', JSON.stringify(catalog[selected].items[selectedCatalog].params)); // eslint-disable-line
                         } catch (e) {
                             console.log(e);
                         }
-                    }} btncolor={btncolor} text="Оплатить наличными" />
+                    }} btncolor={btncolor} text="Pay by cash" />
                     <FlatButton isHide={catalog[selected].items[selectedCatalog].price !== ''} onPress={() => {
                         try {
                             mp.trigger('client:shopMenu:doName', JSON.stringify(catalog[selected].items[selectedCatalog].params)); // eslint-disable-line
                         } catch (e) {
                             console.log(e);
                         }
-                    }} btncolor={btncolor} text="Открыть" />
+                    }} btncolor={btncolor} text="Open" />
                 </div>
                 </React.Fragment>
             )}

@@ -31,14 +31,14 @@ const PropertyStock = (props) => {
                                 </div>
                         </div>
                         <span className="govmenu__propertygov__info__balance">
-                            {`Текущая задолженость: `}
+                            {`Current debt: `}
                             <span className="govmenu__propertygov__info__balance__info">
                                 {`$ ${balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}
-                                <span className="govmenu__propertygov__info__balance"> из </span>
+                                <span className="govmenu__propertygov__info__balance"> from </span>
                                 <span className="govmenu__propertygov__info__balance__info__max">
                                     {` $ ${maxbalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}
                                     <span className="govmenu__propertygov__info__balance">
-                                        {`  [$ ${tax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} в день ]`}
+                                        {`  [$ ${tax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} in a day ]`}
                                     </span>
                                 </span>
                             </span>
@@ -49,7 +49,7 @@ const PropertyStock = (props) => {
                 <div className="govmenu__propertygov__payment" style={{justifyContent: 'space-between'}}>
                     <div className="accountmenu__content__reports__dialog__input" style={{width: '20%', height: 'auto', marginTop: 0, marginBottom: 0, paddingTop: '0.9rem', paddingBottom: '0.9rem'}}>
                         <label style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                            <input style={{width: '70%'}} type="text" name="name" placeholder="Введите сумму..." className="accountmenu__report__input" value={taxValue} onChange={(event) => setTaxValue(event.target.value)} />
+                            <input style={{width: '70%'}} type="text" name="name" placeholder="Enter the amount..." className="accountmenu__report__input" value={taxValue} onChange={(event) => setTaxValue(event.target.value)} />
                             <div style={{display: 'flex'}}>
                                 <span className="govmenu__propertygov__info__balance" style={{fontSize: '0.8rem', marginRight: '10%'}}>
                                     {`MAX`}
@@ -59,44 +59,44 @@ const PropertyStock = (props) => {
                         </label>
                     </div>
                     <span className="govmenu__propertygov__info__balance" style={{marginLeft: '3%', marginRight: '3%'}}>
-                        {`Оплатить`}
+                        {`Pay`}
                     </span>
                     <div className="govmenu__propertygov__payment__btns" style={{minWidth: '60%'}}>
                         <div style={{width: '100%'}}>
                             <BigButton
-                                text="Наличными"
+                                text="Cash"
                                 children={<MdCash fontSize="20px" color="white" />}
                                 type={0}
-                                onPress={() => console.log('Успешно оплатил налог наличными на сумму ' + taxValue)}
+                                onPress={() => console.log('Successfully paid cash tax in the amount ' + taxValue)}
                             />
                         </div>
                         <div style={{width: '100%', marginLeft: '4%'}}>
                             <BigButton
                                 nowrap={true}
-                                text="Банковской картой"
+                                text="By banking card"
                                 children={<MdCard fontSize="20px" color="white" />}
                                 type={0}
-                                onPress={() => console.log('Успешно оплатил налог банковской картой на сумму ' + taxValue)}
+                                onPress={() => console.log('Successfully paid for the tax by banking card for the amount ' + taxValue)}
                             />
                         </div>
                     </div>
                 </div>
                 <div className="accountmenu__cards__btnreports">
                     <div style={{width: '45%'}}>
-                        <BigButton text="Продать агенству" type={2} onPress={() => setAlert(true, {
+                        <BigButton text="Sell to agency" type={2} onPress={() => setAlert(true, {
                             type: 1,
-                            title: 'Продажа агенству',
-                            text: `Вы действительно хотите продать?`,
-                            value: [{text: 'Отказаться', type: 0}, {text: 'Продать', type: 1}]
+                            title: 'Selling to agency',
+                            text: `Do you really want to sell?`,
+                            value: [{text: 'Refuse', type: 0}, {text: 'Sell', type: 1}]
                         })}
                         />
                     </div>
                     <div style={{width: '45%'}}>
-                        <BigButton text="Продать игроку" type={0} onPress={() => setAlert(true, {
+                        <BigButton text="Sell to player" type={0} onPress={() => setAlert(true, {
                             type: 0, 
-                            title: 'Продажа игроку', 
-                            text: `Вы действительно хотите продать транспорт ${address}?`,
-                            value: [{text: 'Отказаться', type: 0}, {text: 'Продать', type: 1}]
+                            title: 'Sale to player', 
+                            text: `You really want to sell transport ${address}?`,
+                            value: [{text: 'Refuse', type: 0}, {text: 'Sell', type: 1}]
                         })} 
                         />
                     </div>

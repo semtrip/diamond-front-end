@@ -11,7 +11,7 @@ const Cars = observer(()=>{
     const state = store.stateCars
     function nullSlots() {
         if(!state.cars.length > 0) {
-            return (<div className="nullBlock">У Вас нет транспорта<br/> свободных слотов: {state.slots}</div>)
+            return (<div className="nullBlock">You do not have transport<br/> free slots: {state.slots}</div>)
         } 
         else {
             let arr = []
@@ -31,13 +31,13 @@ const Cars = observer(()=>{
                         <img src="img/car_example.png" alt="" />
                     </div> 
                     <div className="option">
-                        <b>Информация о транспорте:</b>
-                        <span>Модель:<b>{item.name}</b></span>
-                        <span>Класс:<b>{item.model}</b></span>
-                        <span>Налог:<b className='active'>{item.tax}</b></span>
-                        <span>Штраф:<b>{item.fine}</b></span>
-                        <span>Топливо:<b>{item.fuel}</b></span>
-                        <span>Номер:<b className='active'>{item.number}</b></span>
+                        <b>Transport information:</b>
+                        <span>Model:<b>{item.name}</b></span>
+                        <span>Class:<b>{item.model}</b></span>
+                        <span>Tax:<b className='active'>{item.tax}</b></span>
+                        <span>Fines:<b>{item.fine}</b></span>
+                        <span>Fuel:<b>{item.fuel}</b></span>
+                        <span>Number:<b className='active'>{item.number}</b></span>
                     </div>
                 </div>
             )

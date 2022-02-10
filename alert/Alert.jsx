@@ -69,7 +69,7 @@ class Alert extends React.Component {
                                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                                     <div className="accountmenu__content__reports__dialog__input" style={{ width: '100%', height: 'auto' }}>
                                         <label style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <input style={{ width: '100%' }} type="text" name="name" placeholder="Введите ID игрока..." className="accountmenu__report__input" value={this.state.playerIdInput} onChange={(event) => this.setState({ playerIdInput: event.target.value })} />
+                                            <input style={{ width: '100%' }} type="text" name="name" placeholder="Enter the ID of player..." className="accountmenu__report__input" value={this.state.playerIdInput} onChange={(event) => this.setState({ playerIdInput: event.target.value })} />
                                         </label>
                                     </div>
                                 </div>
@@ -144,12 +144,12 @@ class Alert extends React.Component {
                                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                                     <div className="accountmenu__content__reports__dialog__input" style={{ width: '30%', height: 'auto' }}>
                                         <label style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <input style={{ width: '100%' }} type="text" name="name" placeholder="Введите ID игрока..." className="accountmenu__report__input" value={this.state.playerIdInput} onChange={(event) => this.setState({ playerIdInput: event.target.value })} />
+                                            <input style={{ width: '100%' }} type="text" name="name" placeholder="Enter the ID of player..." className="accountmenu__report__input" value={this.state.playerIdInput} onChange={(event) => this.setState({ playerIdInput: event.target.value })} />
                                         </label>
                                     </div>
                                     <div className="accountmenu__content__reports__dialog__input" style={{ width: '70%', height: 'auto' }}>
                                         <label style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <input style={{ width: '70%' }} type="text" name="name" placeholder="Введите сумму продажи..." className="accountmenu__report__input" value={this.state.priceInput} onChange={(event) => this.setState({ priceInput: event.target.value })} />
+                                            <input style={{ width: '70%' }} type="text" name="name" placeholder="Enter the sale amount..." className="accountmenu__report__input" value={this.state.priceInput} onChange={(event) => this.setState({ priceInput: event.target.value })} />
                                         </label>
                                     </div>
                                 </div>

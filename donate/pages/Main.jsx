@@ -27,16 +27,16 @@ function Main(props) {
           <div className="container">
             <div className="pay-form">
               <div className="text">
-                <div className="title">Пополнение баланса</div>
-                <div className="subtitle">При пополнение определенной суммы, вы получите бонус в зависимости от суммы. <br/>Остерегайтесь мошенников!</div>
+                <div className="title">Balance replenishment</div>
+                <div className="subtitle">When replenishing a certain amount, you will receive a bonus depending on the amount. <br/>Beware of scammers!</div>
               </div>
               <div className="inputs">
                 <input type="email" name="email" id="email" placeholder="ivan.ivanov@diamond.com" />
                 <input type="text" name="sum" id="sum" placeholder="От 2 RUB" onChange={calculateSum.bind(this, props.bonus)} onInput={props.checkInput} maxLength={7} />
               </div>
               <div className="bottom">
-                <div className="text"> Вы получите: <p id="calculatedSum">0</p> <span>DC</span></div>
-                <div className="button">Пополнить баланс</div>
+                <div className="text"> You'll get: <p id="calculatedSum">0</p> <span>DC</span></div>
+                <div className="button">Top up balance</div>
               </div>
             </div>
           </div>

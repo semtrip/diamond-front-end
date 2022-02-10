@@ -13,8 +13,8 @@ const Mission = observer(() => {
     return(
         <div className="mission">
             <div className="head">
-                <h1>Квестовая линия</h1>
-                <span>Общее количество квестов: <b>{state.mission.length}</b></span>
+                <h1>Quest line</h1>
+                <span>Total amount of quests: <b>{state.mission.length}</b></span>
             </div>
             <div className="container">
             {state.mission.map((item, i)=> (
@@ -31,8 +31,8 @@ const Mission = observer(() => {
                             item.attachments !== undefined ?
                             (
                             <span className="count">
-                                Количество заданий:
-                                <span><b>{item.attachments.length}</b>шт</span>
+                                Number of tasks:
+                                <span><b>{item.attachments.length}</b>un.</span>
                             </span>
                             ):null
                         }
@@ -40,14 +40,14 @@ const Mission = observer(() => {
                             item.attachments === undefined ?
                             (
                             <span className="price">
-                                Награда за выполнение:
+                                Completion reward:
                                 <span>{ store.moneyFormat(item.price)}<b>₽</b></span>
                             </span>
                             ):null
                         }
                         </div>
                     </div>
-                    <div className="btn">Начать квест</div>
+                    <div className="btn">Start the quest</div>
                 </div>
             )
             )}

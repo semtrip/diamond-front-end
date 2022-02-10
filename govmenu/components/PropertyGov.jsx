@@ -271,7 +271,7 @@ const PropertyGov = ({ setAlert }) => {
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__content__cards__container">
                     <span className="accountmenu__content__cards__header__name">
-                        Имущество
+                        Property
                     </span>
                     <div className="accountmenu__hr" style={{marginTop: '4%', marginBottom: '4%'}} />
                     <div className="accountmenu__cards__question__container">

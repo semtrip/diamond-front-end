@@ -9,20 +9,20 @@ class GovMenu extends React.Component {
         this.state = {
             show: false,
             panels: [
-                {name: 'Информация', id: 'govmenu-info'},
-                {name: 'Имущество', id: 'govmenu-property'},
-                {name: 'Работы', id: 'govmenu-jobs'},
-                {name: 'Лицензии', id: 'govmenu-license'}
+                {name: 'Information', id: 'govmenu-info'},
+                {name: 'Property', id: 'govmenu-property'},
+                {name: 'Works', id: 'govmenu-jobs'},
+                {name: 'Licenses', id: 'govmenu-license'}
             ],
             activePage: 0,
             jobIndex: 0, // -1 - безработный
-            jobname: 'Механик',
+            jobname: 'Mechanic',
             isAlert: false,
             alertConfig: {
                 type: 1,
                 title: 'Test',
                 text: 'Testtt',
-                value: [{text: 'Далее', type: -1}]
+                value: [{text: 'Next', type: -1}]
             }
         }
     }

@@ -11,36 +11,36 @@ const { EventManager: em } = window;
 let storage = {
     btns: 
     [
-        {id: 'giveMoney', title: 'Передать деньги'},
-        {id: 'dating',title: 'Познакомиться'},
-        {id: 'unTieById',title: 'Снять стяжки'},
-        {id: 'inCarById',title: 'Затащить в ближайшее авто'},
-        {id: 'taskFollowById',title: 'Вести за собой'},
-        {id: 'taskRemoveMaskById',title: 'Снять маску с игрока'},
-        {id: 'showPlayerDoсMenu',title: 'Документы', items: [
-            {id: 'card_id', title: 'Паспорт'},
-            {id: 'work_lic', title: 'Разрешение на работу'},
-            {id: 'showLic',title: 'Лицензии', items: [
-                {id: 'a_lic', title: 'Лицензия категории `А`'},
-                {id: 'b_lic', title: 'Лицензия категории `B`'},
-                {id: 'c_lic', title: 'Лицензия категории `C`'},
-                {id: 'air_lic', title: 'Лицензия на авиатранспорт'},
-                {id: 'ship_lic', title: 'Лицензия на водный транспорт'},
-                {id: 'gun_lic', title: 'Лицензия на оружие'},
-                {id: 'taxi_lic', title: 'Лицензия на перевозку пассажиров'},
-                {id: 'law_lic', title: 'Лицензия юриста'},
-                {id: 'biz_lic', title: 'Лицензия на предпринимательство'},
-                {id: 'fish_lic', title: 'Разрешение на рыболовство'},
-                {id: 'marg_lic', title: 'Разрешение на употребление марихуаны'},]
+        {id: 'giveMoney', title: 'Give money'},
+        {id: 'dating',title: 'Become acquainted'},
+        {id: 'unTieById',title: 'Remove plastic screeds'},
+        {id: 'inCarById',title: 'To drag into the nearest car'},
+        {id: 'taskFollowById',title: 'Lead with him'},
+        {id: 'taskRemoveMaskById',title: 'Remove the mask from the player'},
+        {id: 'showPlayerDoсMenu',title: 'Documentation', items: [
+            {id: 'card_id', title: 'The passport'},
+            {id: 'work_lic', title: 'Permission to work'},
+            {id: 'showLic',title: 'Licenses', items: [
+                {id: 'a_lic', title: 'License category `А`'},
+                {id: 'b_lic', title: 'License category `B`'},
+                {id: 'c_lic', title: 'License category `C`'},
+                {id: 'air_lic', title: 'License for air transport'},
+                {id: 'ship_lic', title: 'License for water transport'},
+                {id: 'gun_lic', title: 'Weapon license'},
+                {id: 'taxi_lic', title: 'License to carriage of passengers'},
+                {id: 'law_lic', title: 'Lawyer\'s license'},
+                {id: 'biz_lic', title: 'Business license'},
+                {id: 'fish_lic', title: 'Fishing permit'},
+                {id: 'marg_lic', title: 'Permission to use marijuana'},]
             },
-            {id: 'med_lic', title: 'Мед. страховка'},
+            {id: 'med_lic', title: 'Medical insurance'},
         ]},
-        {id: 'gos_lic',title: 'Удостоверение'},
-        {id: 'cuffItemById',title: 'Надеть наручники'},
-        {id: 'unCuffById',title: 'Снять наручники'},
-        {id: 'getInvById',title: 'Изъять конфискат'},
-        {id: 'getInvById2',title: 'Обыскать'},
-        {id: 'getPassById',title: 'Установить личность'}
+        {id: 'gos_lic',title: 'Certificate'},
+        {id: 'cuffItemById',title: 'Put handcuffs'},
+        {id: 'unCuffById',title: 'Remove handcuffs'},
+        {id: 'getInvById',title: 'Seize confiscate'},
+        {id: 'getInvById2',title: 'Frisk'},
+        {id: 'getPassById',title: 'Set identity'}
     ]
 }
 
@@ -134,7 +134,7 @@ export default class Menu extends React.Component {
                 }
                 catch (f) {
                     console.log(f)
-                    console.log('Нажата клавиша ' + storage.btns[e.target.id].title + ' id кнопки:' + e.target.dataset.name);
+                    console.log('Pressed key ' + storage.btns[e.target.id].title + ' id buttons:' + e.target.dataset.name);
                 }
             }
         }
@@ -168,7 +168,7 @@ export default class Menu extends React.Component {
                         }
                         catch (f) {
                             console.log(f)
-                            console.log('Нажата клавиша ' + this.state.currentElement[e.target.id].title + ' id кнопки:' + e.target.dataset.name);
+                            console.log('Pressed key ' + this.state.currentElement[e.target.id].title + ' id buttons:' + e.target.dataset.name);
                         }
                     }
                 }
@@ -198,14 +198,14 @@ export default class Menu extends React.Component {
                 blockBtns: this.completion(this.state.oldCurrentElemetn[this.state.currentPage - 2]), 
                 backBtn: false,
                 currentPage: this.state.currentPage - 1});
-            console.log('Нажата клавиша c back');
+            console.log('Pressed key c back');
         }
         if (this.state.currentPage > 2) {
                 this.setState({ 
                     blockBtns: this.completion(this.state.oldCurrentElemetn[this.state.currentPage - 2]), 
                     backBtn: true,
                     currentPage: this.state.currentPage - 1});
-                console.log('Нажата клавиша c back');
+                console.log('Pressed key c back');
          }
 
     }

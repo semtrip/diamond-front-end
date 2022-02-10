@@ -14,8 +14,8 @@ class License extends React.Component {
             player_info: {
                 name: 'Olejka',
                 surname: 'Pelmeshka',
-                sex: 'Мужской',
-                license: 'Лицензия на оружие',
+                sex: 'Male',
+                license: 'Weapon license',
                 date_start: '01.01.2019',
                 date_stop: '01.01.2020',
                 birthday: '21.01.01',
@@ -56,7 +56,7 @@ class License extends React.Component {
     checkSexandImg() {
 
         if (this.state.player_info.img === '') {
-            if (this.state.player_info.sex === 'Мужской') {
+            if (this.state.player_info.sex === 'Male') {
                 this.setState({photo: img_man});
             } else {
                 this.setState({photo: img_woman});

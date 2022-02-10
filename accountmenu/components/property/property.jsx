@@ -14,9 +14,9 @@ const Property = observer(()=>{
     return(
         <div className="property">
             <div className="nav">
-                <div className={state.pageProperty === 'cars' ? 'navButton active': 'navButton'} id='b_cars' onClick={store.setPageProperty}>Транспорт</div>
-                <div className={state.pageProperty === 'bussines' ? 'navButton active': 'navButton'} id='b_bussines' onClick={store.setPageProperty}>Бизнес и др.</div>
-                <div className={state.pageProperty === 'home' ? 'navButton active': 'navButton'} id='b_home' onClick={store.setPageProperty}>Дом</div>
+                <div className={state.pageProperty === 'cars' ? 'navButton active': 'navButton'} id='b_cars' onClick={store.setPageProperty}>Transport</div>
+                <div className={state.pageProperty === 'bussines' ? 'navButton active': 'navButton'} id='b_bussines' onClick={store.setPageProperty}>Business and more.</div>
+                <div className={state.pageProperty === 'home' ? 'navButton active': 'navButton'} id='b_home' onClick={store.setPageProperty}>House</div>
             </div>
             <div className="content">
                 {state.pageProperty === 'cars' ? <Cars />: null}

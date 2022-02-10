@@ -9,22 +9,22 @@ const House = observer(()=>{
     const state = store.stateHouse
     return(
         <div className='house'>
-                <span className="name">Дом #{state.id}</span>
+                <span className="name">House #{state.id}</span>
                 <div className="imgBlock">
                     <img src="img/house_example.png" alt="" />
                 </div> 
                 <div className="info">
-                    <span>Информация о доме:</span>
-                    <span className='infoItem'>Адрес<b>{state.address}</b></span>
-                    <span className='infoItem'>Налог<b>{state.tax}</b></span>
-                    <span className='infoItem'>Жилых мест<b>{state.places}</b></span>
-                    <span className='infoItem'>Гараж<b>{state.garage}</b></span>
-                    <span className='infoItem'>Срок аренды<b>{state.rent}</b></span>
+                    <span>Information about the house:</span>
+                    <span className='infoItem'>The address<b>{state.address}</b></span>
+                    <span className='infoItem'>Tax<b>{state.tax}</b></span>
+                    <span className='infoItem'>Residential places<b>{state.places}</b></span>
+                    <span className='infoItem'>Garage<b>{state.garage}</b></span>
+                    <span className='infoItem'>Lease term<b>{state.rent}</b></span>
                 </div>
                 <div className="button">
                     <div className="sell">
                         <div className="price">
-                            Гос.цена:
+                            State price:
                             <span>{state.price}$</span>
                         </div>
                     </div>

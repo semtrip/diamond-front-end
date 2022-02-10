@@ -75,7 +75,7 @@ const LicenseGov = ({ licIndex }) => {
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__content__cards__container">
                     <span className="accountmenu__content__cards__header__name">
-                        Лицензии
+                        Licenses
                     </span>
                     <div className="accountmenu__hr" style={{marginTop: '4%', marginBottom: '4%'}} />
                     <div className="accountmenu__cards__question__container">
@@ -108,8 +108,8 @@ const LicenseGov = ({ licIndex }) => {
                             dangerouslySetInnerHTML={{__html: licenses[active].desc}}
                         />
                         <BigButton
-                            text={licenses[active].buyed ? "Уже куплено" : 'Купить'}
-                            onPress={() => console.log('ты купил')}
+                            text={licenses[active].buyed ? "Already bought" : 'Buy'}
+                            onPress={() => console.log('you bought')}
                             disabled={false}
                             type={licenses[active].buyed ? -1 : 0}
                         />

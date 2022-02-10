@@ -15,7 +15,7 @@ export default class Draggable extends React.PureComponent {
     drop = () => {
         try {
             if (!this.state.droppable) {
-                console.log('DnD Inventory: Некорректный droppable элемент')
+                console.log('DnD Inventory: Incorrect droppable element')
                 //mp.trigger('client:inventory:notify', 'DnD Inventory: Некорректный droppable элемент'); // eslint-disable-line
                 return false
             }
@@ -25,7 +25,7 @@ export default class Draggable extends React.PureComponent {
             let item = this.props.item
 
             if (!item || !type || !inventory) {
-                console.log('DnD Inventory: Отсутствует одно из свойств')
+                console.log('DnD Inventory: One of the properties is missing')
                 //mp.trigger('client:inventory:notify', 'DnD Inventory: Отсутствует одно из свойств'); // eslint-disable-line
                 return false
             }
@@ -35,7 +35,7 @@ export default class Draggable extends React.PureComponent {
             let id = this.state.droppable.id
 
             if (!validTypes.includes(id)) {
-                console.log('DnD Inventory: Неверное ID')
+                console.log('DnD Inventory: Invalid ID')
                 //mp.trigger('client:inventory:notify', 'DnD Inventory: Неверное ID'); // eslint-disable-line
                 return false
             }
@@ -62,7 +62,7 @@ export default class Draggable extends React.PureComponent {
 
             // Если Droppable не предназначена для этого Draggable
             if (!type.includes(id)) {
-                console.log('DnD Inventory: Тип не совпадает с ID')
+                console.log('DnD Inventory: Type does not coincide with ID')
                 //mp.trigger('client:inventory:notify', 'Тип не совпадает с ID'); // eslint-disable-line
                 return false
             }

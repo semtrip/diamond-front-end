@@ -189,10 +189,10 @@ class Bank extends React.Component {
                 {this.state.isShowModal && (
                     <div className="bank__modal">
                         <div className="bank__modal__container">
-                            <span className="bank__modal__exit" onClick={() => this.setState({ isShowModal: false })}>Закрыть</span>
+                            <span className="bank__modal__exit" onClick={() => this.setState({ isShowModal: false })}>Close</span>
                             <div className="bank__modal__content">
-                                <span className="bank__modal__content__title">Поздравляем!</span>
-                                <span className="bank__modal__content__text">Вы оформили карту нашего банка, желаем приятных покупок и долгосрочного сотрудничества!</span>
+                                <span className="bank__modal__content__title">Congratulations!</span>
+                                <span className="bank__modal__content__text">You issued a card of our bank, we wish you a pleasant shopping and long-term cooperation!</span>
                                 <div className="bank__modal__content__cimg" />
                             </div>
                         </div>
@@ -201,12 +201,12 @@ class Bank extends React.Component {
                 {this.state.isShowModalBlocked && (
                     <div className="bank__modal">
                         <div className="bank__modal__container">
-                            <span className="bank__modal__exit" onClick={() => this.setState({ isShowModalBlocked: false })}>Закрыть</span>
+                            <span className="bank__modal__exit" onClick={() => this.setState({ isShowModalBlocked: false })}>Close</span>
                             <div className="bank__modal__content">
-                                <span className="bank__modal__content__title">Предупреждаем!</span>
-                                <span className="bank__modal__content__text">Процесс блокировки карты является необратимым, средства на вашей карте поступят на другую карту, в ином случае вы получите их наличкой!</span>
+                                <span className="bank__modal__content__title">Warning!</span>
+                                <span className="bank__modal__content__text">The card blocking process is irreversible, funds on your card will go to another card, otherwise you will receive them in cash!</span>
                                 <div className="bank__modal__content__bimg" />
-                                <span className="bank__modal__block" onClick={() => this.blockCard()}>Заблокировать карту</span>
+                                <span className="bank__modal__block" onClick={() => this.blockCard()}>Block the card</span>
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ class Bank extends React.Component {
                     <div className="bank__code">
                         <div className={`bank__code__bg ${this.state.bankInfo.name.split(' ')[0]}__code__bg`} />
                         <span className="bank__code__title">
-                            Введите 4-х значный пин-код
+                        Enter a 4-digit pin code
                         </span>
                         <div className="bank__code__input">
                             <span className="bank__code__input__text">{this.state.codeInput}</span>
@@ -255,7 +255,7 @@ class Bank extends React.Component {
                                     </div>
                                     <div className="bank__menu__exit__container">
                                         <span className="bank__menu__exit">
-                                            Покинуть банк
+                                        Get out of the bank
                                         </span>
                                     </div>
                                 </div>
@@ -264,7 +264,7 @@ class Bank extends React.Component {
                                     if (this.state.selectedAction === -1 && this.state.cards[0].name) {
                                         return (
                                             <div className="bank__menu__history">
-                                                <span className="bank__menu__history__text">История операций</span>
+                                                <span className="bank__menu__history__text">Operations history</span>
                                                 <div className="bank__menu__history__list">
                                                     {this.state.history[this.state.selectedCard].map((item, index) => (
                                                         <HistoryAction 
@@ -273,7 +273,7 @@ class Bank extends React.Component {
                                                         />
                                                     ))}
                                                     {this.state.history[this.state.selectedCard].length === 0 && (
-                                                        <span className="bank__menu__history__empty">Операций пока не было.</span>
+                                                        <span className="bank__menu__history__empty">Operations have not yet been.</span>
                                                     )}
                                                 </div>
                                             </div>
@@ -283,15 +283,15 @@ class Bank extends React.Component {
                                             case 0:
                                                 return (
                                                     <div className="bank__menu__withdraw">
-                                                        <span className="bank__menu__withdraw__text">{`Выдача денежных средств`}</span>
+                                                        <span className="bank__menu__withdraw__text">{`Issuance of funds`}</span>
                                                         <div className="bank__menu__withdraw__content">
                                                             <label>
                                                                 <input
                                                                     className="bank__menu__withdraw__input"
-                                                                    placeholder="Введите сумму"    
+                                                                    placeholder="Enter the amount"    
                                                                 />
                                                             </label>
-                                                            <span className="bank__menu__withdraw__btn">{`Выдать`}</span>
+                                                            <span className="bank__menu__withdraw__btn">{`Issue`}</span>
                                                         </div>
                                                         <div className="bank__menu__withdraw__img" />
                                                     </div>  
@@ -299,15 +299,15 @@ class Bank extends React.Component {
                                             case 1:
                                                 return (
                                                     <div className="bank__menu__withdraw">
-                                                        <span className="bank__menu__withdraw__text">{`Пополнение баланса карты`}</span>
+                                                        <span className="bank__menu__withdraw__text">{`Replenishment of the card balance`}</span>
                                                         <div className="bank__menu__withdraw__content">
                                                             <label>
                                                                 <input
                                                                     className="bank__menu__withdraw__input"
-                                                                    placeholder="Введите сумму"    
+                                                                    placeholder="Enter the amount"    
                                                                 />
                                                             </label>
-                                                            <span className="bank__menu__withdraw__btn">{`Пополнить`}</span>
+                                                            <span className="bank__menu__withdraw__btn">{`Replenish`}</span>
                                                         </div>
                                                         <div className="bank__menu__withdraw__img" />
                                                     </div>
@@ -315,21 +315,21 @@ class Bank extends React.Component {
                                             case 2:
                                                 return (
                                                     <div className="bank__menu__transfer">
-                                                        <span className="bank__menu__transfer__text">{`Перевод`}</span>
+                                                        <span className="bank__menu__transfer__text">{`Transfer`}</span>
                                                         <div className="bank__menu__transfer__content">
                                                             <label className="bank__menu__transfer__label">
                                                                 <input
                                                                     className="bank__menu__transfer__input"
-                                                                    placeholder="Введите номер карты"    
+                                                                    placeholder="Enter the card number"    
                                                                 />
                                                             </label>
                                                             <label className="bank__menu__transfer__label">
                                                                 <input
                                                                     className="bank__menu__transfer__input"
-                                                                    placeholder="Введите сумму перевода"    
+                                                                    placeholder="Enter the sum of the transfer"    
                                                                 />
                                                             </label>
-                                                            <span className="bank__menu__transfer__btn">{`Выполнить перевод`}</span>
+                                                            <span className="bank__menu__transfer__btn">{`Execute transfer`}</span>
                                                         </div>
                                                         <div className="bank__menu__transfer__img" />
                                                     </div>
@@ -337,34 +337,34 @@ class Bank extends React.Component {
                                             case 3:
                                                 return (
                                                     <div className="bank__menu__pincode">
-                                                        <span className="bank__menu__transfer__text">{`Смена пин-кода`}</span>
+                                                        <span className="bank__menu__transfer__text">{`Change of the pin-code`}</span>
                                                         <div className="bank__menu__pincode__content">
                                                             <label className="bank__menu__pincode__label">
                                                                 <input
                                                                     className="bank__menu__pincode__input"
-                                                                    placeholder="Введите старый пин-код"    
+                                                                    placeholder="Enter the old pin-code"    
                                                                 />
                                                             </label>
                                                             <label className="bank__menu__pincode__label">
                                                                 <input
                                                                     className="bank__menu__pincode__input"
-                                                                    placeholder="Введите новый пин-код"    
+                                                                    placeholder="Enter the new pin-code"    
                                                                 />
                                                             </label>
-                                                            <span className="bank__menu__pincode__btn">{`Применить`}</span>
+                                                            <span className="bank__menu__pincode__btn">{`Apply`}</span>
                                                         </div>
                                                     </div>
                                                 )
                                             case 4:
                                                 return (
                                                     <span className="bank__menu__blockcard" onClick={() => this.setState({ isShowModalBlocked: true })}>
-                                                        {`Заблокировать карту`}
+                                                        {`Block the card`}
                                                     </span>
                                                 )
                                             case -1:
                                                 return (
                                                     <span className="bank__menu__getcard" onClick={() => this.setState({page: 'create-card'})}>
-                                                        {`Получить карту`}
+                                                        {`Get a card`}
                                                     </span>
                                                 )
                                             default:
@@ -375,14 +375,14 @@ class Bank extends React.Component {
                                 {this.state.selectedAction !== -1 && (
                                 <div className="bank__menu__back__container">
                                     <span className="bank__menu__back" onClick={() => this.setState({ selectedAction: -1 })}>
-                                        Вернуться назад
+                                    Get to back
                                     </span>
                                 </div>
                                 )}
                                 </div>
                                 <div className="bank__menu__right">
                                     <div className="bank__menu__cards">
-                                        <span className={this.state.cards.length ? "bank__menu__cards__text" : "bank__menu__cards__text_disabled"}>{this.state.cards ? `Ваши карты` : `Карты отсутствуют`}</span>
+                                        <span className={this.state.cards.length ? "bank__menu__cards__text" : "bank__menu__cards__text_disabled"}>{this.state.cards ? `Your cards` : `Cards are absent`}</span>
                                         <div className="bank__menu__cards__list">
                                             {this.state.cards.map((item, index) => {
                                                 return (item.name ?
@@ -414,7 +414,7 @@ class Bank extends React.Component {
                                             )}
                                         </div>
                                         {this.state.cards && (
-                                            <span className="bank__menu__cards__balance">{`Общий баланс карт: ${this.state.totalBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} $`}</span>
+                                            <span className="bank__menu__cards__balance">{`General balance of card: ${this.state.totalBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} $`}</span>
                                         )}
                                     </div>
                                 </div>
@@ -434,23 +434,23 @@ class Bank extends React.Component {
                                             </div>
                                             <div className="bank__cards__list__content">
                                                 <span className="bank__cards__list__content__title">
-                                                    Описание
+                                                    Description
                                                 </span>
                                                 <span className="bank__cards__list__content__text">
-                                                    Классическая карта, которая позволит вам оплачивать различные покупки, получать зарплату и распоряжаться финансами
+                                                    Classic card, which will allow you to pay for various purchases, receive salary and dispose of finance
                                                 </span>
                                                 <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
-                                                    Получить
+                                                    Receive
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="bank__cards__btns">
                                         <span className="bank__cards__btn" onClick={() => this.setState({ page: 'main' })}>
-                                            Вернуться назад
+                                        Get to back
                                         </span>
                                         <span className="bank__cards__btn" onClick={() => this.setState({ show: false })}>
-                                            Покинуть банк
+                                        Get out of the bank
                                         </span>
                                     </div>
                                 </div>

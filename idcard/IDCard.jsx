@@ -14,9 +14,9 @@ class IDCard extends React.Component {
             player_info: {
                 firstname: 'Iru',
                 lastname: 'Nil',
-                sex: 'Мужской',
+                sex: 'Male',
                 age: '25.01.1996',
-                nation: 'Американец',
+                nation: 'American',
                 regist: '',
                 idcard: '00252',
                 subscribe: 'Lolic',
@@ -54,7 +54,7 @@ class IDCard extends React.Component {
 
     checkSexandImg() {
         if (this.state.player_info.img === '') {
-            if (this.state.player_info.sex === 'Мужской') {
+            if (this.state.player_info.sex === 'Male') {
                 this.setState({photo: img_man});
             } else {
                 this.setState({photo: img_woman});

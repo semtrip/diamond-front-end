@@ -71,22 +71,22 @@ const JobsGov = ({ jobIndex , jobname }) => {
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__content__cards__container">
                     <span className="accountmenu__content__cards__header__name">
-                        Работы
+                        Works
                     </span>
                     <div className="accountmenu__hr" style={{marginTop: '4%', marginBottom: '4%'}} />
                     {jobIndex !== -1 && jobname && (
                     <React.Fragment>
                         <div className="govmenu__jobbar">
                             <span className="govmenu__jobbar__text">
-                                Текущая работа:
+                                Current work:
                             </span>
                             <span className="govmenu__jobbar__name">
                                 {jobname}
                             </span>
                         </div>
                         <BigButton
-                            text={'Уволиться'}
-                            onPress={() => console.log('ты утсроился')}
+                            text={'Resign'}
+                            onPress={() => console.log('You are settled')}
                             disabled={false}
                             type={1}
                         />
@@ -123,8 +123,8 @@ const JobsGov = ({ jobIndex , jobname }) => {
                             dangerouslySetInnerHTML={{__html: jobs[active].desc}}
                         />
                         <BigButton
-                            text={jobIndex === -1 ? "Устроиться" : jobIndex === active ? 'Уволиться' : 'Устроиться'}
-                            onPress={() => console.log('ты утсроился')}
+                            text={jobIndex === -1 ? "Settle" : jobIndex === active ? 'Resign' : 'Settle'}
+                            onPress={() => console.log('You are settled')}
                             disabled={false}
                             type={jobIndex === -1 ? 0 : jobIndex === active ? 1 : 0}
                         />

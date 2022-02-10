@@ -14,10 +14,10 @@ class WorkID extends React.Component {
             player_info: {
                 firstname: 'Olejka',
                 lastname: 'Pelmeshka',
-                sex: 'Мужской',
+                sex: 'Male',
                 age: '25.01.1996',
-                first_work: 'Строитель',
-                second_work: 'Таксист',
+                first_work: 'Builder',
+                second_work: 'Taxi driver',
                 lvl_work: '10',
                 experience: '2',
                 data: '05.02.2020',
@@ -57,7 +57,7 @@ class WorkID extends React.Component {
 
     checkSexandImg() {
         if (this.state.player_info.img === '') {
-            if (this.state.player_info.sex === 'Мужской') {
+            if (this.state.player_info.sex === 'Male') {
                 this.setState({photo: img_man});
             } else {
                 this.setState({photo: img_woman});
@@ -85,49 +85,49 @@ class WorkID extends React.Component {
                                     <div className="pl_inf">
                                         <div className="pl-row">
                                             <div className="pl-clm-inf-n name-styl-id name-pff">
-                                                <span className="pl-grow tsp-topname">Имя</span>
+                                                <span className="pl-grow tsp-topname">Name</span>
                                                 <span className="pl-black">{this.state.player_info.firstname}</span>
                                             </div>
                                             <div className="pl-age pl-clm-inf-n name-styl-id name-pff">
-                                                <span className="pl-grow row-tsp otsp_work">Пол</span>
+                                                <span className="pl-grow row-tsp otsp_work">Gender</span>
                                                 <span className="pl-black pl-workid-sex">{this.state.player_info.sex}</span>
                                             </div>
                                         </div>
                                         <div className="pl-clm-inf-n name-styl-id name-pff btm-last">
-                                            <span className="pl-grow tsp-topname">Фамилия</span>
+                                            <span className="pl-grow tsp-topname">Surname</span>
                                             <span className="pl-black">{this.state.player_info.lastname}</span>
                                         </div>
                                         <div className="pl-row">
                                             <div className="pl-workcard">
-                                                <span className="pl-grow row-tsp otsp_work">Основная работа</span>
+                                                <span className="pl-grow row-tsp otsp_work">Main job</span>
                                                 <span className="pl-black">{this.state.player_info.first_work}</span>
                                             </div>
                                             <div className="pl_work_birthday">
-                                                <span className="pl-grow row-tsp otsp_work">Дата рождения</span>
+                                                <span className="pl-grow row-tsp otsp_work">Date of birth</span>
                                                 <span className="pl-black">{this.state.player_info.age}</span>
                                             </div>
                                         </div>
                                         <div className="pl-row">
                                             <div className="pl-workcard">
-                                                <span className="pl-grow row-tsp otsp_work">Уровень рабочего</span>
+                                                <span className="pl-grow row-tsp otsp_work">Worker level</span>
                                                 <span className="pl-black">{this.state.player_info.lvl_work}</span>
                                             </div>
                                             <div className="pl-work2">
-                                                <span className="pl-grow row-tsp otsp_work">Опыт рабочего</span>
+                                                <span className="pl-grow row-tsp otsp_work">Worker experience</span>
                                                 <span className="pl-black">{this.state.player_info.experience}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="pl-age pl-clm-inf-n name-styl-id name-pff pl-work-id-date-block">
-                                        <span className="pl-grow row-tsp otsp_work">Дата получения</span>
+                                        <span className="pl-grow row-tsp otsp_work">Date of receiving</span>
                                         <span className="pl-black pl-work-id-date">{this.state.player_info.data}</span>
                                     </div>
                                     <div className="pl-clm-docs-work">
-                                        <span className="pl-clm-inf-docs">Номер документа</span>
+                                        <span className="pl-clm-inf-docs">Document number</span>
                                         <span className="pl-clm-inf-docs-num">{this.state.player_info.idwork}</span>
                                     </div>
                                     <div className="pl-idcard-subscribe">
-                                        <span className="pl-idcard-subscribe-text">Личная подпись: </span>
+                                        <span className="pl-idcard-subscribe-text">Personal signature: </span>
                                         <span className="pl-idcard-subscribe-value">{this.state.player_info.subscribe}</span>
                                     </div>
                                 </div>

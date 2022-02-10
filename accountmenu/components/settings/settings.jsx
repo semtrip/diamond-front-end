@@ -17,12 +17,12 @@ const Settings = observer(()=>{
     return(
         <div className="setting">
             <div className="nav">
-                <div className={state.page === 'main' ? 'navButton active': 'navButton'} id='b_main' onClick={store.setPageSettings}>Основное</div>
-                <div className={state.page === 'interface' ? 'navButton active': 'navButton'} id='b_interface' onClick={store.setPageSettings}>Интерфейс</div>
-                <div className={state.page === 'voice' ? 'navButton active': 'navButton'} id='b_voice' onClick={store.setPageSettings}>Голосовой чат</div>
-                <div className={state.page === 'chat' ? 'navButton active': 'navButton'} id='b_chat' onClick={store.setPageSettings}>Текстовый чат</div>
-                <div className={state.page === 'button' ? 'navButton active': 'navButton'} id='b_button' onClick={store.setPageSettings}>Назначение клавиш</div>
-                <div className={state.page === 'map' ? 'navButton active': 'navButton'} id='b_map' onClick={store.setPageSettings}>Карта</div>
+                <div className={state.page === 'main' ? 'navButton active': 'navButton'} id='b_main' onClick={store.setPageSettings}>Basic</div>
+                <div className={state.page === 'interface' ? 'navButton active': 'navButton'} id='b_interface' onClick={store.setPageSettings}>Interface</div>
+                <div className={state.page === 'voice' ? 'navButton active': 'navButton'} id='b_voice' onClick={store.setPageSettings}>Voice chat</div>
+                <div className={state.page === 'chat' ? 'navButton active': 'navButton'} id='b_chat' onClick={store.setPageSettings}>Text Chat</div>
+                <div className={state.page === 'button' ? 'navButton active': 'navButton'} id='b_button' onClick={store.setPageSettings}>Key assignment</div>
+                <div className={state.page === 'map' ? 'navButton active': 'navButton'} id='b_map' onClick={store.setPageSettings}>Map</div>
             </div>
             <div className="content">
                 {state.page === 'main' ? <Main />: null}

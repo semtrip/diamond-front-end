@@ -858,7 +858,7 @@ export default class CarShop extends React.Component {
                                             <div className="l-c-info-car">
                                                 <div className="t-c-txt">{e.make}</div>
                                                 <span className="carshop__item__price">{e.price}</span>
-                                                <span className="carshop__item__count">{`В наличии: ${e.count} шт.`}</span>
+                                                <span className="carshop__item__count">{`In stock: ${e.count} un.`}</span>
                                             </div>
                                             <div className="l-c-img-car">
                                                 <img src={e.img} alt="" className="car-img-settings"/>
@@ -875,10 +875,10 @@ export default class CarShop extends React.Component {
                                 <div className="clr-m-btn-box">
                                     <input type="radio" name="colorcarslider" id="ccslider1" defaultChecked
                                            onClick={() => this.currentColorBtn('main')}/>
-                                    <label htmlFor="ccslider1" className="ccslider-box">Основной</label>
+                                    <label htmlFor="ccslider1" className="ccslider-box">Main</label>
                                     <input type="radio" name="colorcarslider" id="ccslider2"
                                            onClick={() => this.currentColorBtn('secondary')}/>
-                                    <label htmlFor="ccslider2" className="ccslider-box">Дополнительный</label>
+                                    <label htmlFor="ccslider2" className="ccslider-box">Additional</label>
                                 </div>
                                 <div className="color-box-slider"
                                      key={`${this.state.current_btn_color} ${this.state.change_car.make} ${this.state.change_car.model}`}>
@@ -971,23 +971,23 @@ export default class CarShop extends React.Component {
                                     })}
                                 </div>
                                 <div className="buy-list-c-btn">
-                                    <span className="carshop__action__title">Покупка</span>
+                                    <span className="carshop__action__title">Purchase</span>
                                     <div className="b-l-btn-title">{this.state.change_car.price}</div>
                                     <div className="carshop__action__row__btns">
-                                        <div className="b-l-btn-box" onClick={() => this.buyCar(1)}>По карте</div>
-                                        <div className="b-l-btn-box" onClick={() => this.buyCar(0)}>Наличкой</div>
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar(1)}>By card</div>
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar(0)}>By cash</div>
                                     </div>
                                 </div>
                                 <div className="rent-list-c-btn">
-                                    <span className="carshop__action__title">Аренда</span>
+                                    <span className="carshop__action__title">Rent</span>
                                     <div className="b-l-btn-title" style={{fontSize: '35px', color: 'rgba(255, 255, 255, 0.4)'}}>{this.state.change_car.rent}</div>
                                     <div className="carshop__action__row__btns">
-                                        <div className="b-l-btn-box" style={{margin: 0, width: '330px'}} onClick={() => this.rentCar()}>Аренда</div>
+                                        <div className="b-l-btn-box" style={{margin: 0, width: '330px'}} onClick={() => this.rentCar()}>Rent</div>
                                         {/*<div className="b-l-btn-box" onClick={() => this.testCar()}>Тест-драйв</div>*/}
                                     </div>
                                 </div>
                                 <div className="rent-list-c-btn">
-                                    <div className="b-l-btn-box__exit" onClick={() => this.exitCar()}>Покинуть автосалон</div>
+                                    <div className="b-l-btn-box__exit" onClick={() => this.exitCar()}>Get out of the dealership</div>
                                 </div>
                             </React.Fragment>
                             : null}

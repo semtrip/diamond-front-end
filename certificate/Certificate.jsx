@@ -103,7 +103,7 @@ class Certificate extends React.Component {
 
     checkSexandImg() {
         if (this.state.player_info.img === '') {
-            if (this.state.player_info.sex === 'Мужской') {
+            if (this.state.player_info.sex === 'Male') {
                 this.setState({photo: img_man});
             } else {
                 this.setState({photo: img_woman});
@@ -141,15 +141,15 @@ class Certificate extends React.Component {
                                         <span className="fib-black">{this.state.player_info.id}</span>
                                     </div>
                                     <div className="box-fib-inf-tt">
-                                        <span className="fib-grow ff-rr-kk">Отдел</span>
+                                        <span className="fib-grow ff-rr-kk">Division</span>
                                         <span className="fib-black">{this.state.player_info.dep}</span>
                                     </div>
                                     <div className="box-fib-inf-tt">
-                                        <span className="fib-grow ff-rr-kk">Должность</span>
+                                        <span className="fib-grow ff-rr-kk">Position</span>
                                         <span className="fib-black">{this.state.player_info.position}</span>
                                     </div>
                                     <div className="box-fib-inf-tt">
-                                        <span className="fib-grow ff-rr-kk">Пол</span>
+                                        <span className="fib-grow ff-rr-kk">Gender</span>
                                         <span className="fib-black">{this.state.player_info.sex}</span>
                                     </div>
                                     <div className="pl-cert-subscribe">

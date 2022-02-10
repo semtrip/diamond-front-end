@@ -172,7 +172,7 @@ const Information = () => {
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__content__cards__container">
                     <span className="accountmenu__content__cards__header__name">
-                        Информация
+                        Information
                     </span>
                     <div className="accountmenu__cards__question__container">
                         {info.map((item, index) => (
@@ -204,13 +204,13 @@ const Information = () => {
                             <div className="govmenu__worker">
                                 <div className="govmenu__worker__info">
                                     <span className="accountmenu__content__cards__questinfo__header__name">
-                                        {`Губернатор штата`}
+                                        {`Governor State`}
                                     </span>
                                     <span className="govmenu__propertygov__info__balance" style={{fontSize: '1.8rem', marginTop: '2%'}}>
                                         {`${governor.name}`}
                                     </span>
                                     <span className="accountmenu__content__cards__questinfo__header__count">
-                                        {`Избран до ${governor.date}`}
+                                        {`Elected until ${governor.date}`}
                                     </span>
                                 </div>
                             </div>

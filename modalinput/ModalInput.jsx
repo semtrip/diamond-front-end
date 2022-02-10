@@ -9,8 +9,8 @@ class ModalInput extends React.Component {
         super(props)
         this.state = {
             show: false,
-            title: 'А может и не может',
-            value: ['Закрыть'],
+            title: 'And maybe can not',
+            value: ['Close'],
             params: {name: null},
             text: '',
             defaultText: '',

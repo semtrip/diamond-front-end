@@ -195,7 +195,7 @@ export default class DonateMenu extends React.Component {
       tankCapacity.innerHTML = `${car.tankCapacity}L`;
       fuelConsumption.innerHTML = `${car.fuelConsumption}L`;
       trunkVolume.innerHTML = `${car.trunkVolume}cm3`;
-      permissibleWeight.innerHTML = `${car.permissibleWeight} кг`;
+      permissibleWeight.innerHTML = `${car.permissibleWeight} kg`;
 
     }, 100)
 
@@ -237,21 +237,21 @@ export default class DonateMenu extends React.Component {
                     <div className="subtitle" id='about-subtitle'>Mustang</div>
                   </div>
                   <div className="price-container">
-                    <div className="text">Цена:</div>
+                    <div className="text">Price:</div>
                     <div className="price" id='about-price'>0</div>
                     <div className="logo"><img src={Logo} alt="" /></div>
                   </div>
                 </div>
-                <div className="title-info">Информация об Авто</div>
+                <div className="title-info">Information about car</div>
                 <div className="info-container">
                   <div className="left-container">
-                    <div className="text">Класс</div>
-                    <div className="text">Макс.Скорость</div>
-                    <div className="text">Тип топлива</div>
-                    <div className="text">Тип Вместимость бака</div>
-                    <div className="text">Расход топлива</div>
-                    <div className="text">Объем багажника</div>
-                    <div className="text">Допустимый вес</div>
+                    <div className="text">Class</div>
+                    <div className="text">Maximum speed</div>
+                    <div className="text">Fuel type</div>
+                    <div className="text">Type tank capacity</div>
+                    <div className="text">Fuel consumption</div>
+                    <div className="text">Volume of trunk</div>
+                    <div className="text">Permissible weight</div>
                   </div>
                   <div className="right-container">
                     <div id="about-class">S</div>
@@ -260,15 +260,15 @@ export default class DonateMenu extends React.Component {
                     <div id="about-tank-capacity">0L</div>
                     <div id="about-fuel-consumption">0L</div>
                     <div id="about-trunk-volume">0cm3</div>
-                    <div id="about-permissible-weight">0 кг</div>
+                    <div id="about-permissible-weight">0 kg</div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="about-buttons">
-              <div className="cancel-button" onClick={this.cancel.bind(this)}>Отмена</div>
+              <div className="cancel-button" onClick={this.cancel.bind(this)}>Cancel</div>
               <div className="buy-button" onClick={this.buyCar.bind(this)}>
-                <div className="text">Купить</div>
+                <div className="text">Buy</div>
                 <img src={Arrow} alt="" />
               </div>
             </div>
@@ -296,7 +296,7 @@ export default class DonateMenu extends React.Component {
                   <div className="balance-container">
                     <div className="text">
                       <div className="title">{this.state.balance}</div>
-                      <div className="subtitle">Баланс:</div>
+                      <div className="subtitle">Balance:</div>
                     </div>
                     <div className="logo"><img src={Logo} alt="" /></div>
                   </div>

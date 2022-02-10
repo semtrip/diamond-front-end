@@ -41,12 +41,12 @@ const Interface = observer(()=>{
         </div>
         <div className="interface-button">
                 <div className="text">
-                    <span>Чтобы изменения вступили в силу, нажмите кнопку “Применить”</span>
-                    <span>Чтобы сбросить введеные вами изменения нажмите кнопку “Сбросить”</span>
+                    <span>To change to take effect click “Apply”</span>
+                    <span>To reset the changes you entered click “Reset”</span>
                 </div>
                 <div className="btn">
-                    <div className="apply" onClick={store.clickApplyInterface}>Применить</div>
-                    <div className="throw" onClick={store.clickThrowInterface}>Сбросить</div>
+                    <div className="apply" onClick={store.clickApplyInterface}>Apply</div>
+                    <div className="throw" onClick={store.clickThrowInterface}>Reset</div>
                 </div>
          </div>
          </>
